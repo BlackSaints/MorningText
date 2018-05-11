@@ -1,5 +1,8 @@
 package com.example.sh.morningtext.javaText;
 
+/**
+ * 多态
+ */
 public class Animal {
 
     public String name;
@@ -19,7 +22,6 @@ public class Animal {
         Lady lady = new Lady();
         lady.happy(dog);
         lady.happy(bird);
-
     }
 
 }
