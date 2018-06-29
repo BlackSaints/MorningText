@@ -19,4 +19,5 @@ public class CustomExceptionImp {
         throw new MyException("测试自定义exception",1);
     }
 
+
 }

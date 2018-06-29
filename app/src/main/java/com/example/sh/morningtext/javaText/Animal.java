@@ -5,6 +5,7 @@ package com.example.sh.morningtext.javaText;
  */
 public class Animal {
 
+
     public String name;
 
     public Animal(String name){

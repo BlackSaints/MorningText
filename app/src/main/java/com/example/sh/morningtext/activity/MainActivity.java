@@ -15,7 +15,7 @@ import com.example.sh.morningtext.fragment.JavaFragment;
 import com.example.sh.morningtext.fragment.LearnAndroidFragment;
 import com.example.sh.morningtext.fragment.MDesignFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     private MDesignFragment mdFragment;
     private LearnAndroidFragment learFragment;

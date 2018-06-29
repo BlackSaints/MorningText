@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="learn"
-    />
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_9pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=".9图片"
+         />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="布局组件"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_baseview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="常用View"
+        />
+</LinearLayout>

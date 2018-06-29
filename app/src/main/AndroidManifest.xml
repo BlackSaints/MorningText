@@ -18,6 +18,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.Pic9Activity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.LinearLayoutActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.FramelayoutDemo01"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.BaseViewActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.TextViewActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.EditViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustUnspecified"
+            />
+        <activity android:name=".activity.ButtonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustUnspecified"
+            />
+        <activity android:name=".activity.ListViewActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

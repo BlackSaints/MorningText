@@ -3,4 +3,21 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="translucent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="dark">#88888888</color>
+    <color name="gray">#DBE0E3</color>
+    <!--半透明-->
+    <color name="translucent_half">#20000000</color>
+    <!--白色透明度-->
+    <color name="translucent_white_05">#f2ffffff</color>
+    <!--黑色透明度-->
+    <color name="translucent_black_05">#f2000000</color>
+
+    <color name="reveal_color">#FFFFFF</color>
+    <color name="bottom_color">#3086E4</color>
+    <color name="bottom_bg">#40BAF8</color>
+
 </resources>
