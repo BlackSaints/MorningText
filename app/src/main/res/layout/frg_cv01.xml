@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.sh.morningtext.cview.CustomView01
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundcolor="@color/gray"
+        app:progresscolor="@color/colorPrimary"
+        app:radius="100dp"
+        app:stokewidth="15dp"
+        app:text="借款额度"
+        app:textcolor="@color/black"
+        app:textsize="15sp"
+        />
+
+</LinearLayout>

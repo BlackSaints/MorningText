@@ -1,8 +1,12 @@
 package com.example.sh.morningtext;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+
+import com.example.sh.morningtext.activity.MainActivity;
+import com.example.sh.morningtext.activity.WelcomeActivity;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,5 +26,18 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("com.example.sh.morningtext", appContext.getPackageName());
+    }
+
+    @Test
+    public void checkWelcomeskip(){
+
+//        WelcomeActivity activity = Robolectric.setupActivity(WelcomeActivity.class);
+//        activity.findViewById(R.id.btn_wel).performClick();
+//
+//        Intent expectedIntent  = new Intent(activity, MainActivity.class);
+//        Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
+//
+//        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+
     }
 }

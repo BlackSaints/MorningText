@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_poll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络请求轮询（无条件）"
+        />
+
+    <Button
+        android:id="@+id/btn_poll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络请求轮询(有条件)"
+        />
+
+    <Button
+        android:id="@+id/btn_double"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络请求嵌套"
+        />
+
+    <Button
+        android:id="@+id/btn_errtry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出错重连"
+        />
+
+</LinearLayout>

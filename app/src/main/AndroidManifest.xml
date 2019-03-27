@@ -2,15 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sh.morningtext">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".MApplication">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.WelcomeActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +21,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".activity.Pic9Activity"
             android:screenOrientation="portrait"
             />
@@ -45,6 +50,186 @@
         <activity android:name=".activity.ListViewActivity"
             android:screenOrientation="portrait"
             />
+
+        <activity android:name=".activity.GridViewActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.SpinnerActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.ExpandableListViewActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.MBaseActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.ToastActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.DialogActivity"
+        android:screenOrientation="portrait"
+        />
+        <activity android:name=".activity.PopuWindowWidthMenu"
+        android:screenOrientation="portrait"
+        />
+        <activity android:name=".activity.EventActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.EventListenerAcivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.AnsyncTaskActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.GesturesActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.FourPartsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.ACYActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".activity.ServiceActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.DataSaveActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.SharedPreferencesActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.SqliteActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.CustomView01Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+
+        <activity android:name=".activity.CustomViewLayoutActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.HorProgressbarActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.ThreeFrameActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.OkHttpActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.VolleyActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.MDesignActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.RxjavaActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.RxjavaDemosActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.RetrofitActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.RxBindingActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".network.activity.RxRetrofitActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.MVDesignActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".mvdesign.mvc.text.MvcActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".mvdesign.mvp.text.MvpActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".mvdesign.mvp.online.view.OnlineMVPActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.EventBusActivity_1"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.EventBusActivity_2"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.EventBusActivity_3"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.DataBindingActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".gitproject.arouter.ArouterActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".gitproject.arouter.textactivity.TextActivity01"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.MCustomViewActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".gitproject.arouter.textactivity.TextActivity02"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".gitproject.arouter.textactivity.TextActivity03"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.MRecycleViewActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".activity.MToolbarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+
+        <activity android:name=".activity.MAppbarLayoutActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <service android:name=".service.MService">
+
+        </service>
+
+        <service android:name=".service.MIntentService" android:exported="false"/>
+        <service android:name=".service.NotificationServices"/>
+
+        <service android:name=".service.LoopService"/>
+        <receiver android:name=".recevier.AlarmReceiver"/>
+
     </application>
 
 </manifest>

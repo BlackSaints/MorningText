@@ -5,48 +5,54 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.sh.morningtext.R;
+import com.example.sh.morningtext.adapter.BaseViewAdapter;
+import com.example.sh.morningtext.adapter.CommonAdapter;
+
+import java.util.List;
 
 /**
  * 基础布局
  */
-public class BaseViewActivity extends AppCompatActivity implements View.OnClickListener{
+public class BaseViewActivity extends AppCompatActivity {
+
+    Class[] acy = {TextViewActivity.class,EditViewActivity.class,ButtonActivity.class,
+            ListViewActivity.class,GridViewActivity.class,SpinnerActivity.class,
+            ExpandableListViewActivity.class,ToastActivity.class,DialogActivity.class,
+            PopuWindowWidthMenu.class};
+    String[] btnName = {"TextView","Edittext","Button","ListView","GridView","Spinner",
+            "ExpandableListView","Toast","Dialog","PopuWindow&Menu"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baseview);
 
-        TextView btn_textview = findViewById(R.id.btn_textview);
-        btn_textview.setOnClickListener(this);
+        ListView mListView = findViewById(R.id.base_listview);
+        BaseViewAdapter adapter = new BaseViewAdapter(btnName,R.layout.adapter_baseview) {
+            @Override
+            public void bindView(BaseViewAdapter.BaseViewHolder viewHolder, Object item) {
+                TextView mTextView = (TextView) viewHolder.getView(R.id.tv_baseview);
+                mTextView.setText(item.toString());
+            }
+        };
 
-        TextView btn_edittext = findViewById(R.id.btn_edittext);
-        btn_edittext.setOnClickListener(this);
+        mListView.setAdapter(adapter);
 
-        TextView btn_button = findViewById(R.id.btn_button);
-        btn_button.setOnClickListener(this);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(BaseViewActivity.this,acy[position]));
+            }
+        });
 
-        TextView btn_listview = findViewById(R.id.btn_listview);
-        btn_listview.setOnClickListener(this);
+
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_textview:
-                startActivity(new Intent(BaseViewActivity.this,TextViewActivity.class));
-                break;
-            case R.id.btn_edittext:
-                startActivity(new Intent(BaseViewActivity.this,EditViewActivity.class));
-                break;
-            case R.id.btn_button:
-                startActivity(new Intent(BaseViewActivity.this,ButtonActivity.class));
-                break;
-            case R.id.btn_listview:
-                startActivity(new Intent(BaseViewActivity.this,ListViewActivity.class));
-                break;
-        }
-    }
 }

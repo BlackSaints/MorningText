@@ -21,6 +21,8 @@ public class ViewTypeAdapter extends BaseAdapter {
 
     public int TYPE_BOOK = 1;
     public int TYPE_FRUIT = 2;
+
+
     public ViewTypeAdapter(List<Object> mData, Context context) {
         this.context = context;
         this.mData = mData;
@@ -60,16 +62,40 @@ public class ViewTypeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolderBook holderBook = null;
+        ViewHolderFruit holderFruit = null;
         if(convertView == null){
             if(getItemViewType(position) == TYPE_BOOK){
                 convertView = LayoutInflater.from(context).inflate(R.layout.adapter_book,null);
-                ViewHolderBook holderBook = new ViewHolderBook();
-                 
+                holderBook = new ViewHolderBook();
+                holderBook.bookName = convertView.findViewById(R.id.tv_book_name);
+                holderBook.bookTime = convertView.findViewById(R.id.tv_book_time);
+                convertView.setTag(holderBook);
+            }else if(getItemViewType(position) == TYPE_FRUIT){
+                convertView = LayoutInflater.from(context).inflate(R.layout.adapter_fruit,null);
+                holderFruit = new ViewHolderFruit();
+                holderFruit.fruitName = convertView.findViewById(R.id.tv_fruit_name);
+                holderFruit.fruitAddress = convertView.findViewById(R.id.tv_fruit_address);
+                convertView.setTag(holderFruit);
+            }
+        }else{
+            if(getItemViewType(position) == TYPE_BOOK){
+                holderBook = (ViewHolderBook) convertView.getTag();
+            }else if(getItemViewType(position) == TYPE_FRUIT){
+                holderFruit = (ViewHolderFruit) convertView.getTag();
             }
         }
 
-
-        return null;
+        if(getItemViewType(position) == TYPE_BOOK){
+            BookBean bean = (BookBean) mData.get(position);
+            holderBook.bookName.setText(bean.getBookName());
+            holderBook.bookTime.setText(bean.getBookTime());
+        }else if(getItemViewType(position) == TYPE_FRUIT){
+            FruitBean fruitBean = (FruitBean) mData.get(position);
+            holderFruit.fruitName.setText(fruitBean.getFruitName());
+            holderFruit.fruitAddress.setText(fruitBean.getFruitAddress());
+        }
+        return convertView;
     }
 
     class ViewHolderBook{
@@ -77,4 +103,8 @@ public class ViewTypeAdapter extends BaseAdapter {
         TextView bookTime;
     }
 
+    class ViewHolderFruit{
+        TextView fruitName;
+        TextView fruitAddress;
+    }
 }

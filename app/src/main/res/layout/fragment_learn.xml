@@ -22,6 +22,39 @@
         android:id="@+id/btn_baseview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="常用View"
+        android:text="2.0常用View"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3.0事件"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4.0四大组件"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_data_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存数据"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_three_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第三方框架"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设计模式"
         />
 </LinearLayout>

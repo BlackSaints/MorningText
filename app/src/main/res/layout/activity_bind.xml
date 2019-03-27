@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="com.example.sh.morningtext.bean.UserBean"
+             alias="user2"/>
+
+        <variable
+            name="user"
+            type="com.example.sh.morningtext.bean.UserBean"/>
+
+        <variable
+            name="listener"
+            type="com.example.sh.morningtext.activity.DataBindingActivity.TextClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{user.step? View.VISIBLE:View.GONE}">
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            android:onClick="@{() -> listener.click()}"
+            />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入姓名"
+            android:text="@={user.name}"
+            />
+        <Button
+            android:id="@+id/click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click"
+            android:onClick="@{() -> listener.onInputListener()}"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{user.step?View.GONE:View.VISIBLE}"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="page2"/>
+    </LinearLayout>
+    </LinearLayout>
+</layout>

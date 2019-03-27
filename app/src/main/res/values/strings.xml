@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">MorningText</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">View</string>
+    <string name="title_dashboard">Base</string>
+    <string name="title_notifications">Java</string>
     <string name="baselineAligned">baselineAligned</string>
     <string name="devider_linar">devider</string>
     <string name="baselineAligned_true">baselineAligned_true</string>
     <string name="baselineAligned_false">baselineAligned_false</string>
     <string name="baselineAlignedChildIndex">baselineAlignedChildIndex</string>
+    <string name="spinner_title">Spinner</string>
+    <string name="view_custom">自定义view</string>
 </resources>

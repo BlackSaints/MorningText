@@ -4,6 +4,10 @@ public class BookBean {
     public String bookName;
     public String bookTime;
 
+    public BookBean(String bookName,String bookTime){
+        this.bookName = bookName;
+        this.bookTime = bookTime;
+    }
     public String getBookName() {
         return bookName == null ? "" : bookName;
     }

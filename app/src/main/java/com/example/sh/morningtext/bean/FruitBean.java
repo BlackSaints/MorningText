@@ -5,6 +5,10 @@ public class FruitBean {
     public String fruitAddress;
     public String fruitMoney;
 
+    public FruitBean(String fruitName,String fruitAddress){
+        this.fruitName = fruitName;
+        this.fruitAddress = fruitAddress;
+    }
     public String getFruitName() {
         return fruitName == null ? "" : fruitName;
     }
